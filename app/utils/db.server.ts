@@ -10,11 +10,11 @@ declare global {
 
   if (process.env.NODE_ENV === 'production') {
     db = new PrismaClient()
-    await db.$connect()
+     db.$connect()
   } else {
     if (!global.__db) {
       global.__db = new PrismaClient()
-     await global.__db.$connect()
+      global.__db.$connect()
     }
     db = global.__db
   }
