@@ -6,8 +6,6 @@ publish = "public"
 command = "npm run dev"
 targetPort = 3000
 
-[functions]
-  included_files = ["languages/**"]
 
 # Set immutable caching for static files, because they have fingerprinted filenames
 

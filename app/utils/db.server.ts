@@ -7,8 +7,7 @@ declare global {
 }
 
 
-try {
-  // Your database operations here
+
   if (process.env.NODE_ENV === 'production') {
     db = new PrismaClient()
     await db.$connect()
@@ -21,10 +20,6 @@ try {
   }
   
 
-} catch (error) {
-  throw new Error("Error with DB Operation");
-} finally {
-  await db.$disconnect();
-}
+
 
 export { db }
