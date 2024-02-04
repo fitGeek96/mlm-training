@@ -7,7 +7,7 @@
     "seed": "node prisma/seed"
   },
   "scripts": {
-    "build": "prisma generate && remix build",
+    "build": "prisma generate && prisma db push && remix build",
     "dev": "remix dev",
     "start": "netlify serve",
     "postinstall": "prisma generate",
