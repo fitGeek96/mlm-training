@@ -3,18 +3,26 @@
   "private": true,
   "sideEffects": false,
   "type": "module",
+  "prisma": {
+    "seed": "node prisma/seed"
+  },
   "scripts": {
-    "build": "remix build",
+    "build": "prisma generate && remix build",
     "dev": "remix dev",
     "start": "netlify serve",
+    "postinstall": "prisma generate",
     "typecheck": "tsc -b"
   },
   "dependencies": {
     "@netlify/functions": "^2.0.0",
     "@netlify/remix-adapter": "^2.0.0",
+    "@prisma/client": "^5.9.0",
+    "@remix-run/css-bundle": "^2.5.1",
     "@remix-run/node": "^2.6.0",
     "@remix-run/react": "^2.6.0",
+    "bcryptjs": "^2.4.3",
     "cross-env": "^7.0.3",
+    "prisma": "^5.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
